@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>التقديم على وظيفة – خير زمان</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Tahoma', sans-serif;
+            background: #f2f5f7;
+        }
+
+        .header {
+            background: #2c7d32;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            width: 500px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+            animation: fadeIn 0.7s ease-in-out;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c7d32;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 18px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #2c7d32;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #2c7d32;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1d5d21;
+            transform: scale(1.02);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">التقديم على وظائف خير زمان</div>
+
+<div class="container">
+    <h2>استمارة التقديم</h2>
+
+    <form action="submit.php" method="POST" enctype="multipart/form-data">
+
+        <label>الاسم بالكامل:</label>
+        <input type="text" name="name" required>
+
+        <label>العنوان:</label>
+        <input type="text" name="address" required>
+
+        <label>رقم الهاتف:</label>
+        <input type="text" name="phone" required>
+
+        <label>الوظيفة المطلوبة:</label>
+        <select name="job" required>
+            <option value="كاشير">كاشير</option>
+            <option value="عامل مخزن">عامل مخزن</option>
+            <option value="مدخل بيانات">مدخل بيانات</option>
+            <option value="مشرف قسم">مشرف قسم</option>
+        </select>
+
+        <label>نبذة عن خبراتك:</label>
+        <textarea name="experience" rows="4"></textarea>
+
+        <label>صورة البطاقة - الوجه (إجباري):</label>
+        <input type="file" name="id_card_front" accept="image/*" required>
+
+        <label>صورة البطاقة - الظهر (إجباري):</label>
+        <input type="file" name="id_card_back" accept="image/*" required>
+
+        <button type="submit">إرسال الطلب</button>
+    </form>
+</div>
+
+<div class="footer">
+    © 2025 جميع الحقوق محفوظة – خير زمان
+</div>
+
+</body>
+</html>
